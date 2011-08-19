@@ -11,24 +11,40 @@
       background-color: #50bddc;
       font-family: Helvetica, Arial, FreeSans, san-serif;
       color: #000000;
+			-webkit-background-size: 50px 50px;
+      background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+      background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+      background-image: -moz-linear-gradient(0deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+      background-image: -ms-linear-gradient(0deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+      background-image: -o-linear-gradient(0deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+      background-image: linear-gradient(0deg, rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
     }
     #container {
       margin: 0 auto;
       width: 700px;
     }
-    h1 { font-size: 3.8em; color: #af4223; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
+    h1 { font-size: 3.8em; color: #fff; margin-bottom: 40px; }
+    h1 a { text-decoration: none ;color:#fff;}
+    h1 a:hover{color:#af4223;}
     h2 { font-size: 1.5em; color: #af4223; }
     h3 { text-align: center; color: #af4223; }
     a { color: #af4223; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .authors { float: right; }
+    .authors { float: right; padding-top:12px;}
+.authors a{position:relative;dislplay:block;float:right;}
+.authors img{margin:5px;z-index:200;position:relative;}
+.authors a .masked{display:none;position:absolute;top:0;left:0;padding:58px 5px 5px 5px;width:48px;background:#000;color:#fff;font-size:12px;}
+.authors a:hover{text-decoration:none;}
+.authors a:hover .masked{display:block;}
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
-    ul li a{display:block;padding:0.5 1em;margin:0.2em;background:#85cadd;}
-    ul li a:Hover{background:#af4223;color:#50bddc;}
+    ul{padding:0 0 4em 0;}
+    ul li{list-style:none;padding:0.2em 0;}
+    ul li a{display:block;padding:0.5em 1em;text-decoration:none;
+	    opacity:0.8;background-color:#af4223;color:#50bddc;}
+    ul li a:Hover{background:#000;color:#50bddc;}
+    ul li a:active{background:#af4223;opacity:1;}
+
   </style>
 </head>
 
@@ -39,13 +55,14 @@
 
     <div class="authors">
       <a href="http://www.douban.com/people/SuiBo/" target="_blank">
-        <img border="0" width="48" src="http://img3.douban.com/icon/u2355722-237.jpg"></a>
+        <img border="0" width="48" src="http://img3.douban.com/icon/u2355722-237.jpg">
+<div class="masked">glenn woo</div></a>
       <a href="http://www.douban.com/people/smalloranges/" target="_blank">
-        <img border="0" width="48" src="http://img3.douban.com/icon/u2089883-23.jpg"></a>
+        <img border="0" width="48" src="http://img3.douban.com/icon/u2089883-23.jpg">
+<div class="masked">九间</div></a>
     </div>
 
-    <h1><a href="http://github.com/smalloranges/covers">covers</a>
-      <span class="small">by <a href="http://github.com/smalloranges">smalloranges</a></span></h1>
+    <h1><a href="http://github.com/smalloranges/covers">covers</a></h1>
 
     <ul>
     <li><a href="http://www.douban.com/photos/album/54447831/" target="_blank">Portrait</a></li>
